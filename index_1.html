@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>চার স্লাইড লেআউট</title>
+    <style>
+        /* CSS অংশ */
+        .container-4-column {
+            display: flex; /* ফ্লেক্সবক্স ব্যবহার করে কলামগুলোকে পাশাপাশি রাখা */
+            flex-wrap: wrap; /* ছোট স্ক্রিনে কন্টেন্টকে নিচে নামিয়ে আনা */
+            width: 90%; /* পুরো পৃষ্ঠার 90% জায়গা নেবে */
+            margin: 0 auto; /* কন্টেইনারটিকে মাঝখানে আনা */
+            border: 1px solid #ccc; /* পুরো ফ্রেমের বর্ডার (ঐচ্ছিক) */
+        }
+        
+        .slide-item {
+            /* প্রতিটি কলাম 50% জায়গা নেবে (2x2 গ্রিড তৈরি হবে) */
+            flex: 1 1 50%; 
+            box-sizing: border-box; 
+            padding: 20px;
+            border: 1px solid #eee; /* প্রতিটি স্লাইডের বর্ডার */
+            text-align: center;
+        }
+
+        .slide-item h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        .slide-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border-radius: 5px;
+        }
+
+        /* ছোট স্ক্রিনের জন্য (ঐচ্ছিক, মোবাইল ফ্রেন্ডলি করার জন্য) */
+        @media (max-width: 768px) {
+            .slide-item {
+                flex: 1 1 100%; /* মোবাইলে প্রতিটি স্লাইড পুরো 100% জায়গা নেবে */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-4-column">
+        
+        <div class="slide-item">
+           <li>
+            <h3>উদ্যোক্তা হওয়ার মাধ্যমে দেশের অর্থনীতিতে ইতিবাচক ভূমিকা রাখা।তরুণদের মধ্যে নেতৃত্বের গুণাবলী ও সমস্যা সমাধানের মানসিকতা তৈরি করা।</h3>
+            <a href="https://iuddokta.com/">বিস্তারিত</a></li>
+            <img src="uddacta_6.jpg" alt="uddacta_6"> 
+        </div>
+
+        <div class="slide-item">
+            <h3>২.কম্পিউটার প্রশিক্ষণের মাধ্যমে বিশ্বকে জানার সুযোগ তৈরি করা। </h3>
+            <p>তথ্য প্রযুক্তি ক্ষেত্রে ক্যারিয়ার গড়ার বিশাল সম্ভাবনা তুলে ধরা।দৈনন্দিন কাজ এবং ব্যবসায়িক ক্ষেত্রে প্রযুক্তির ব্যবহারকে কার্যকর করে তোলা।</p>
+            <img src="computer_7.jpg" alt="computer_7">
+        </div>
+
+        <div class="slide-item">
+            <h3>৩.কারিগরি প্রশিক্ষণ আত্মবিশ্বাস বাড়ায় এবং সমাজে সম্মানজনক অবস্থান তৈরি করে।</h3>
+            <p>বাজারের চাহিদা অনুযায়ী শিক্ষার্থীদের তৈরি করে কর্মজীবন সুরক্ষিত করা। হাতে দক্ষতা থাকলে কখনোই কাজ হারানোর ভয় থাকে না এই বার্তা দেওয়া।</p>
+            <img src="vocational_5.jpg" alt="vocational_5">
+        </div>
+
+        <div class="slide-item">
+            <h3>৪.দক্ষতা উন্নয়ন (Skill Development)</h3>
+            <p>আমাদের প্রধান লক্ষ্য হলো অসহায় এবং পিছিয়ে পড়া মানুষের পাশে থেকে মহান আল্লাহর সন্তুষ্টি অর্জন করা। আমরা বিশ্বাস করি মানবিকতাই সেরা ধর্ম।</p>
+            <img src="skill_9.jpg" alt="সমাজের প্রতি দায়বদ্ধতা">
+        </div>
+
+    </div>
+
+</body>
+</html>
