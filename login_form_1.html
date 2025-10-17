@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Registration Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center; /* horizontally center */
+            align-items: center;     /* vertically center */
+            font-family: Arial, sans-serif;
+            background-color: silver
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px 30px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h3 {
+            text-align: center;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 8px 16px;
+            margin-right: 10px;
+        }
+
+        label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .jan{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="form-container">
+        <h2 class="jan">জান্নাতি-হাব ফাউন্ডেশন</h2>
+        <form action="">
+            <h3>লগইন ফর্ম</h3>
+
+            নাম: <br>
+            <input type="text" name="নাম" placeholder="আপনার নাম লিখুন"> <br>
+            মোবাইল:
+            <input type="text" name="মোবাইল" placeholder="মোবাইল নাম্বার লিখুন"> <br>
+            ইমেইল: <br>
+            <input type="text" name="ইমেইল" placeholder="আপনার ইমেইল লিখুন">
+            মতামত দিন: <br>
+            <textarea name="" id="মতামত" placeholder="বিস্তারিত কিছু লিখুন....."></textarea> <br>
+            লিঙ্গ: <br>
+            <input type="radio" name="লিঙ্গ" value="পুরুষ"> পুরুষ 
+            <input type="radio" name="লিঙ্গ" value="মহিলা"> মহিলা <br>
+            <button type="button">সাবমিট</button>
+            <button type="button" value="রিসেট">রিসেট</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
