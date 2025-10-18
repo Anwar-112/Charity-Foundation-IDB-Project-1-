@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>আপনার অনুদান প্রদান করুন</title>
+
+  <style>
+    body {
+      font-family: "Noto Sans Bengali", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f2f2;
+    }
+
+    .donation-section {
+      background: #f5d27a; /* 🔹 এখানে ব্যাকগ্রাউন্ড রঙ পরিবর্তন  */
+      padding: 30px 20px;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: 50px auto;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    select, input {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 250px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: #008000;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #006400;
+    }
+
+    p {
+      margin-top: 15px;
+      color: #333;
+      font-size: 15px;
+    }
+
+    p a {
+      color: #006400;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    p a:hover {
+      text-decoration: underline;
+    }
+    h1{
+        text-align: center;
+        color: aqua;
+    }
+  </style>
+</head>
+<body>
+    <h1 class="center">Jnnati-hub Foundation</h1>
+
+  <div class="donation-section">
+    <h2>আপনার অনুদান প্রদান করুন</h2>
+
+    <form action="#" method="post">
+      <!-- 🔹 তহবিল নির্বাচন (Dropdown) -->
+      <select name="fund" required>
+        <option value="">তহবিল নির্বাচন করুন *</option>
+        <option value="education">শিক্ষা সহায়তা তহবিল</option>
+        <option value="health">চিকিৎসা তহবিল</option>
+        <option value="food">খাদ্য সহায়তা তহবিল</option>
+        <option value="masjid">মসজিদ নির্মাণ তহবিল</option>
+        <option value="orphans">অনাথ শিশু তহবিল</option>
+      </select>
+
+      <!-- 🔹 মোবাইল বা ইমেইল ইনপুট -->
+      <input type="text" name="contact" placeholder="মোবাইল / ইমেইল *" required>
+
+      <!-- 🔹 অনুদানের পরিমাণ -->
+      <input type="number" name="amount" placeholder="৳ পরিমাণ *" required>
+
+      <!-- 🔹 সাবমিট বোতাম -->
+      <button type="submit">দান করুন</button>
+    </form>
+
+    <p>
+      আপনি <b>জান্নাতী হাব ফাউন্ডেশনে</b> দান করতে পারেন। 
+      <a href="#">বিস্তারিত জানতে ক্লিক করুন।</a>
+    </p>
+  </div>
+
+</body>
+</html>
