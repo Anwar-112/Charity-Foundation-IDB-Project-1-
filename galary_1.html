@@ -3,119 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>আপনার অনুদান প্রদান করুন</title>
-
+  <title>গ্যালারি</title>
   <style>
     body {
       font-family: "Noto Sans Bengali", sans-serif;
+     color: aquamarine;
       margin: 0;
       padding: 0;
-      background: #f2f2f2;
-    }
-
-    .donation-section {
-      background: #f5d27a; /* 🔹 এখানে ব্যাকগ্রাউন্ড রঙ পরিবর্তন  */
-      padding: 30px 20px;
-      border-radius: 10px;
-      max-width: 900px;
-      margin: 50px auto;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     h2 {
-      color: #333;
-      margin-bottom: 20px;
-      font-size: 24px;
+      text-align: center;
+      color: #1a7f42;
+     padding-top: 30px;
+      
     }
 
-    form {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
+    /* গ্যালারির মূল কন্টেইনার */
+    .gallery-container {
+      display: grid; /* ✅ grid layout চালু */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* ছবিগুলো auto adjust হবে */
+      gap: 15px; /* প্রতিটি ছবির মাঝে ফাঁকা */
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
     }
 
-    select, input {
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-      width: 250px;
-      box-sizing: border-box;
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      background: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    button {
-      background: #008000;
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .caption {
+      text-align: center;
+      padding: 10px;
+      background-color: #1a7f42;
       color: white;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: #006400;
-    }
-
-    p {
-      margin-top: 15px;
-      color: #333;
-      font-size: 15px;
-    }
-
-    p a {
-      color: #006400;
-      text-decoration: none;
       font-weight: bold;
-    }
-
-    p a:hover {
-      text-decoration: underline;
-    }
-    h1{
-        text-align: center;
-        color: aqua;
     }
     .img{
 			height: 60px;
-			width: 90px;
-			
-		}
+        width: 90px;
+    }
   </style>
   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <title>Cleveland - Responsive Health And Medical Html Template</title>
-    <!-- Bootstrap core CSS -->
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Font  -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,700|Raleway:400,400i,500i,600,700" rel="stylesheet"> 
-    <!-- flaticon icon -->
-    <link rel="stylesheet" href="assets/fonts/icon-font.min.css">
-    <!-- icofont icon -->
-    <link rel="stylesheet" href="assets/fonts/icofont.css">
-    <!--- meanmenu Css-->
-    <link rel="stylesheet" href="assets/css/meanmenu.min.css" media="all" />
-    <!-- gijgo CSS -->
-    <link rel="stylesheet" href="assets/css/gijgo.min.css">
-    <!-- animate CSS -->
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <!--- owl carousel Css-->
-    <link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.default.min.css">
-    <!-- venobox -->
-    <link rel="stylesheet" href="assets/venobox/css/venobox.css" />
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Responsive  CSS -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+	<title>Cleveland - Responsive Health And Medical Template</title>
+	<!-- Bootstrap core CSS -->
+	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Google Font  -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,700|Raleway:400,400i,500i,600,700"
+		rel="stylesheet">
+	<!-- flaticon icon -->
+	<link rel="stylesheet" href="assets/fonts/icon-font.min.css">
+	<!-- icofont icon -->
+	<link rel="stylesheet" href="assets/fonts/icofont.css">
+	<!--- meanmenu Css-->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css" media="all" />
+	<!-- animate CSS -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<!--- owl carousel Css-->
+	<link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.default.min.css">
+	<!-- venobox -->
+	<link rel="stylesheet" href="assets/venobox/css/venobox.css" />
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- Responsive  CSS -->
+	<link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
-  <div class="sticky-menu ">
+  <!-- START NAVIGATION AREA -->
+			<div class="sticky-menu ">
 				<div class="mainmenu-area">
 					<div class="auto-container">
 						<div class="row">
@@ -147,7 +123,7 @@
 												<li><a href="single-service.html">ইফতার বিতরণ</a></li>
 											</ul>
 										</li>
-										<li><a href="gallery.html" class="nav-link">গ্যালারি</a></li <li><a
+										<li><a href="galary_1.html" class="nav-link">গ্যালারি</a></li <li><a
 											href="about.html" class="nav-link">আমাদের সম্পর্কে</a></li>
 										<li><a href="map.html" class="nav-link">যোগাযোগ করুন</a></li>
 									</ul>
@@ -165,41 +141,135 @@
 					</div>
 					<!--- END CONTAINER -->
 				</div>
+				<!-- END NAVIGATION AREA -->
 
-    <h1 class="center">Jnnati-hub Foundation</h1>
+  <h2>আমাদের কার্যক্রমের গ্যালারি</h2>
 
-  <div class="donation-section">
-    <h2>আপনার অনুদান প্রদান করুন</h2>
+  <!-- এই container এর মধ্যে যত div থাকবে সব horizontal grid এ যাবে -->
+  <div class="gallery-container">
+    
+    <div class="gallery-item">
+      <img src="image_04.jpg" alt="ছবি ১">
+      <div class="caption">খাদ্য বিতরণ</div>
+    </div>
 
-    <form action="#" method="post">
-      <!-- 🔹 তহবিল নির্বাচন (Dropdown) -->
-      <select name="fund" required>
-        <option value="">তহবিল নির্বাচন করুন *</option>
-        <option value="education">শিক্ষা সহায়তা তহবিল</option>
-        <option value="health">চিকিৎসা তহবিল</option>
-        <option value="food">খাদ্য সহায়তা তহবিল</option>
-        <option value="masjid">মসজিদ নির্মাণ তহবিল</option>
-        <option value="orphans">অনাথ শিশু তহবিল</option>
-      </select>
+    <div class="gallery-item">
+      <img src="korbani-01.jpg" alt="ছবি ২">
+      <div class="caption">কুরবানি কার্যক্রম</div>
+    </div>
 
-      <!-- 🔹 মোবাইল বা ইমেইল ইনপুট -->
-      <input type="text" name="contact" placeholder="মোবাইল / ইমেইল *" required>
+    <div class="gallery-item">
+      <img src="computer_7.jpg" alt="ছবি ৩">
+      <div class="caption">কারিগরি প্রশিক্ষণ</div>
+    </div>
 
-      <!-- 🔹 অনুদানের পরিমাণ -->
-      <input type="number" name="amount" placeholder="৳ পরিমাণ *" required>
+    <div class="gallery-item">
+      <img src="dorjog-01.jpg" alt="ছবি ৪">
+      <div class="caption">রোজার ইফতার</div>
+    </div>
 
-      <!-- 🔹 সাবমিট বোতাম -->
-      <button type="submit">দান করুন</button>
-    </form>
+    <div class="gallery-item">
+      <img src="iamge_07.jpg
+      " alt="ছবি ৫">
+      <div class="caption">সেবামূলক কাজ</div>
+    </div>
 
-    <p>
-      আপনি <b>জান্নাতী হাব ফাউন্ডেশনে</b> দান করতে পারেন। 
-      <a href="#">বিস্তারিত জানতে ক্লিক করুন।</a>
-    </p>
+    <div class="gallery-item">
+      <img src="image_02.jpg" alt="ছবি ৫">
+      <div class="caption">সেবামূলক কাজ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="image_03.jpg" alt="ছবি ৫">
+      <div class="caption">সেবামূলক কাজ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="380-3.jpg" alt="ছবি ৫">
+      <div class="caption">সেবামূলক কাজ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="sabolombi-01.jpg" alt="ছবি ৫">
+      <div class="caption">সেবামূলক কাজ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="siter-011.jpg" alt="ছবি ৫">
+      <div class="caption">শীতবস্ত্র বিতরণ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="skill_9.jpg" alt="ছবি ৫">
+      <div class="caption">সেবামূলক কাজ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="skill_8.jpg" alt="ছবি ৫">
+      <div class="caption">কারিগরি প্রশিক্ষণ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="uddacta_6.jpg" alt="ছবি ৫">
+      <div class="caption">সেবামূলক কাজ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="vocational_5.jpg" alt="ছবি ৫">
+      <div class="caption">কারিগরি প্রশিক্ষণ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="nolkup-01.jpg" alt="ছবি ৫">
+      <div class="caption">নিরাপদ পানি</div>
+    </div>
+    <div class="gallery-item">
+      <img src="sabolombi-01.jpg" alt="ছবি ৫">
+      <div class="caption">সেবামূলক কাজ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="siter-011.jpg" alt="ছবি ৫">
+      <div class="caption">শীতবস্ত্র বিতরণ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="image_04.jpg" alt="ছবি ১">
+      <div class="caption">খাদ্য বিতরণ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="image_02.jpg" alt="ছবি ৫">
+      <div class="caption">সেবামূলক কাজ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="iamge_07.jpg
+      " alt="ছবি ৫">
+      <div class="caption">সেবামূলক কাজ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="dorjog-01.jpg" alt="ছবি ৪">
+      <div class="caption">রোজার ইফতার</div>
+    </div>
+    <div class="gallery-item">
+      <img src="sabolombi-01.jpg" alt="ছবি ৫">
+      <div class="caption">সেবামূলক কাজ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="380-3.jpg" alt="ছবি ৫">
+      <div class="caption">সেবামূলক কাজ</div>
+    </div><div class="gallery-item">
+      <img src="image_03.jpg" alt="ছবি ৫">
+      <div class="caption">সেবামূলক কাজ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="image_02.jpg" alt="ছবি ৫">
+      <div class="caption">সেবামূলক কাজ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="dorjog-01.jpg" alt="ছবি ৪">
+      <div class="caption">রোজার ইফতার</div>
+    </div>
+    <div class="gallery-item">
+      <img src="image_04.jpg" alt="ছবি ১">
+      <div class="caption">খাদ্য বিতরণ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="korbani-01.jpg" alt="ছবি ২">
+      <div class="caption">কুরবানি কার্যক্রম</div>
+    </div>
+
   </div>
 
-  <!-- START FOOTER -->
-	<footer>
+  <footer>
 		<!--Footer top -->
 		<div class="footer-top overlay-2 section-back-image-2" data-background="assets/img/bg/counter-bg.jpg">
 			<div class="auto-container">
@@ -323,6 +393,34 @@
 	<!-- END FOOTER -->
 
 
+	<!-- Latest jQuery -->
+	<script src="assets/js/jquery-2.2.4.min.js"></script>
+	<!-- popper js -->
+	<script src="assets/bootstrap/js/popper.min.js"></script>
+	<!-- Latest compiled and minified Bootstrap -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- meanmenu min js  -->
+	<script src="assets/js/jquery.meanmenu.min.js"></script>
+	<!-- Sticky JS -->
+	<script src="assets/js/jquery.sticky.js"></script>
+	<!-- gijgo js  -->
+	<script src="assets/js/gijgo.js"></script>
+	<!-- owl-carousel min js  -->
+	<script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
+	<!-- jquery appear js  -->
+	<script src="assets/js/jquery.appear.js"></script>
+	<!-- countTo js -->
+	<script src="assets/js/jquery.inview.min.js"></script>
+	<!-- jquery mixitup js -->
+	<script src="assets/js/jquery.mixitup.min.js"></script>
+	<!-- venobox js -->
+	<script src="assets/venobox/js/venobox.min.js"></script>
+	<!-- scrolltopcontrol js -->
+	<script src="assets/js/scrolltopcontrol.js"></script>
+	<!-- WOW - Reveal Animations When You Scroll -->
+	<script src="assets/js/wow.min.js"></script>
+	<!-- scripts js -->
+	<script src="assets/js/scripts.js"></script>
 
 </body>
 </html>
